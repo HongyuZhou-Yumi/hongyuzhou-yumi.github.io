@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#eceee8"/>
+    <stop offset="100%" stop-color="#dfe7e1"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="750" fill="url(#g)"/>
+<circle cx="980" cy="110" r="250" fill="none" stroke="#aab8af" stroke-width="2" opacity=".55"/>
+<circle cx="1030" cy="160" r="150" fill="none" stroke="#aab8af" stroke-width="2" opacity=".45"/>
+<path d="M70 590 C260 460 390 690 590 520 S900 380 1130 500" fill="none" stroke="#75877b" stroke-width="3" opacity=".5"/>
+<rect x="70" y="72" width="92" height="5" rx="2.5" fill="#315744"/>
+<text x="70" y="560" fill="#183426" font-size="54" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="1">ARMONII</text>
+<text x="73" y="610" fill="#657067" font-size="28" font-family="Arial, Helvetica, sans-serif">wearable robotic arms</text>
+<text x="73" y="676" fill="#8a918b" font-size="20" font-family="Arial, Helvetica, sans-serif">drop MP4 in assets/videos to replace this poster</text>
+</svg>
