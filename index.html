@@ -1,0 +1,348 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Academic homepage of Hongyu Zhou — research, background and publications."
+  >
+
+  <title>Hongyu Zhou</title>
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+>
+
+<!-- Font Awesome: LinkedIn -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+>
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       TOP BAR
+       ========================= -->
+
+  <header class="topbar">
+
+    <div class="topbar-inner">
+
+      <a
+        class="brand"
+        href="#top"
+        aria-label="Back to top"
+      >
+        Hongyu Zhou
+      </a>
+
+
+      <nav aria-label="Primary navigation">
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#publications">
+          Publications
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       MAIN
+       ========================= -->
+
+  <main
+    id="top"
+    class="page"
+  >
+
+
+
+    <!-- =======================
+         ABOUT
+         ======================= -->
+
+    <section
+      class="hero"
+      id="about"
+    >
+
+
+
+      <!-- =====================
+           LEFT SIDE
+           ===================== -->
+
+      <aside class="author-sidebar">
+
+
+        <!-- PHOTO -->
+
+        <div class="portrait-wrap">
+
+          <div
+            class="portrait-placeholder"
+            aria-label="Profile photo placeholder"
+          >
+
+            <span id="initials">
+              HZ
+            </span>
+
+            <small>
+              replace with
+              <br>
+              assets/profile.jpg
+            </small>
+
+          </div>
+
+
+          <img
+            id="profile-photo"
+            class="profile-photo"
+            src="assets/profile.jpg"
+            alt="Profile photo"
+          >
+
+        </div>
+
+
+
+        <!-- NAME / ROLE / AFFILIATION / EMAIL -->
+
+        <div class="author-content">
+
+
+          <!-- NAME -->
+
+          <h1
+            class="author-name"
+            id="name"
+          ></h1>
+
+
+
+          <!-- ROLE
+               原来的内容保留
+          -->
+
+          <p
+            class="author-role"
+            id="role"
+          ></p>
+
+
+
+          <!-- AFFILIATIONS -->
+
+          <div
+            class="affiliations"
+            id="affiliations"
+          ></div>
+
+
+
+          <!-- EMAIL -->
+
+          <div class="contact">
+
+            <span class="contact-label">
+            </span>
+
+            <span
+              class="email-links"
+              id="email"
+            ></span>
+
+          </div>
+<div class="academic-links">
+
+  <!-- Google Scholar -->
+  <a
+    href="https://scholar.google.com/citations?user=cqWkrzYAAAAJ&hl=en"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Google Scholar"
+    title="Google Scholar"
+  >
+    <i class="ai ai-google-scholar"></i>
+  </a>
+
+
+  <!-- ORCID -->
+  <a
+    href="https://orcid.org/0009-0007-3278-2122"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="ORCID"
+    title="ORCID"
+  >
+    <i class="ai ai-orcid"></i>
+  </a>
+
+
+  <!-- LinkedIn -->
+  <a
+    href="https://www.linkedin.com/in/hongyu-zhou-874385358/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+    title="LinkedIn"
+  >
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+
+
+  <!-- ResearchGate -->
+  <a
+    href="https://www.researchgate.net/profile/Hongyu-Zhou-20"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="ResearchGate"
+    title="ResearchGate"
+  >
+    <i class="ai ai-researchgate"></i>
+  </a>
+
+</div>
+
+        </div>
+
+      </aside>
+
+
+
+      <!-- =====================
+           RIGHT SIDE
+           ===================== -->
+
+      <div class="intro">
+
+
+        <!-- ABOUT ME -->
+
+        <h2 class="about-title">
+          About Me
+        </h2>
+
+
+
+        <!-- 原来的 BIO 内容 -->
+
+        <div
+          class="bio"
+          id="bio"
+        ></div>
+
+
+
+        <!-- 原来的 RESEARCH 内容 -->
+
+        <div class="research-detail">
+  <p id="research-intro" class="research-intro"></p>
+  <ul id="research-list" class="research-list"></ul>
+</div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =======================
+         PUBLICATIONS
+         原内容完全保留
+         ======================= -->
+
+    <section
+      class="publications-section"
+      id="publications"
+    >
+
+
+      <div class="section-heading">
+
+        <div>
+
+          <h2>
+            Selected Publications
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div id="publication-list"></div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <p>
+
+      ©
+
+      <span id="year"></span>
+
+      <span id="footer-name"></span>
+
+    </p>
+
+  </footer>
+
+
+
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
+
+  <script src="site-data.js"></script>
+
+  <script src="app.js"></script>
+
+
+</body>
+
+</html>
