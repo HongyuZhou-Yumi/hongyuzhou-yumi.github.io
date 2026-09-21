@@ -20,32 +20,8 @@
 
 
   /* =========================
-     AFFILIATIONS
-     保留原内容，只改成上下两行
-     ========================= */
-
-  const affiliationsContainer = $("#affiliations");
-
-  affiliationsContainer.innerHTML = "";
-
-  data.affiliations.forEach(affiliation => {
-    const div = document.createElement("div");
-    div.className = "affiliation-item";
-    div.textContent = affiliation;
-    affiliationsContainer.appendChild(div);
-  });
-
-
-  /* =========================
-     RESEARCH
-     ========================= */
-
-
-
-  /* =========================
      EMAILS
-     保留两个邮箱，并排显示
-     每个邮箱单独可点击
+     两个邮箱分别可点击
      ========================= */
 
   const emails =
@@ -58,7 +34,6 @@
   emailContainer.innerHTML = "";
 
   emails.forEach((email, index) => {
-
     if (index > 0) {
       const separator = document.createElement("span");
       separator.className = "email-separator";
@@ -67,12 +42,21 @@
     }
 
     const link = document.createElement("a");
-
     link.href = `mailto:${email}`;
     link.textContent = email;
-
     emailContainer.appendChild(link);
   });
+
+
+  /* =========================
+     LOCATION
+     ========================= */
+
+  const locationElement = $("#location");
+
+  if (locationElement) {
+    locationElement.textContent = data.location || "";
+  }
 
 
   /* =========================
@@ -85,7 +69,6 @@
 
   /* =========================
      BIO
-     原内容完全保留
      ========================= */
 
   data.bio.forEach(paragraph => {
@@ -94,69 +77,74 @@
     $("#bio").appendChild(p);
   });
 
+
+  /* =========================
+     RESEARCH
+     ========================= */
+
   const researchIntro = $("#research-intro");
-const researchList = $("#research-list");
+  const researchList = $("#research-list");
 
-if (data.research_intro) {
-  researchIntro.textContent = data.research_intro;
-}
+  if (data.research_intro) {
+    researchIntro.textContent = data.research_intro;
+  }
 
-if (Array.isArray(data.research_topics)) {
-  data.research_topics.forEach(topic => {
-    const li = document.createElement("li");
+  if (Array.isArray(data.research_topics)) {
+    data.research_topics.forEach(topic => {
+      const li = document.createElement("li");
 
-    const strong = document.createElement("strong");
-    strong.textContent = topic.title;
+      const strong = document.createElement("strong");
+      strong.textContent = topic.title;
 
-    li.appendChild(strong);
-    li.appendChild(
-      document.createTextNode(
-        `, ${topic.description}`
-      )
-    );
+      li.appendChild(strong);
+      li.appendChild(
+        document.createTextNode(
+          `, ${topic.description}`
+        )
+      );
 
-    researchList.appendChild(li);
-  });
-}
+      researchList.appendChild(li);
+    });
+  }
+
 
   /* =========================
      PROFILE PHOTO
      ========================= */
 
   const photo = $("#profile-photo");
+  const placeholder = document.querySelector(".portrait-placeholder");
 
   photo.addEventListener("load", () => {
-    document.querySelector(
-      ".portrait-placeholder"
-    ).style.display = "none";
+    placeholder.style.display = "none";
   });
 
   photo.addEventListener("error", () => {
     photo.style.display = "none";
+    placeholder.style.display = "flex";
   });
 
 
   /* =========================
      PUBLICATIONS
-     原逻辑完全保留
+     按 site-data.js 里的顺序显示
+     不额外显示年份
      ========================= */
 
-const list = $("#publication-list");
+  const list = $("#publication-list");
 
-data.publications.forEach(pub => {
-  list.appendChild(
-    renderPublication(pub)
-  );
-});
+  data.publications.forEach(pub => {
+    list.appendChild(
+      renderPublication(pub)
+    );
+  });
 
 
   /* =========================
      PUBLICATION CARD
-     原内容完全保留
      ========================= */
 
   function renderPublication(pub) {
-
     const article = document.createElement("article");
     article.className = "publication";
 
@@ -169,19 +157,20 @@ data.publications.forEach(pub => {
 
     /* POSTER */
 
-    const poster = document.createElement("img");
+    if (pub.poster) {
+      const poster = document.createElement("img");
 
-    poster.src = pub.poster;
-    poster.alt = "";
-    poster.loading = "lazy";
+      poster.src = pub.poster;
+      poster.alt = `${pub.title} preview`;
+      poster.loading = "lazy";
 
-    media.appendChild(poster);
+      media.appendChild(poster);
+    }
 
 
     /* VIDEO */
 
     if (pub.video) {
-
       const video = document.createElement("video");
 
       video.muted = true;
@@ -189,7 +178,6 @@ data.publications.forEach(pub => {
       video.autoplay = true;
       video.playsInline = true;
       video.preload = "metadata";
-
       video.src = pub.video;
 
       video.setAttribute(
@@ -197,24 +185,15 @@ data.publications.forEach(pub => {
         `Demo video for ${pub.title}`
       );
 
-
       video.addEventListener(
         "error",
-        () =>
-          media.classList.add(
-            "is-fallback"
-          )
+        () => media.classList.add("is-fallback")
       );
-
 
       video.addEventListener(
         "loadeddata",
-        () =>
-          media.classList.remove(
-            "is-fallback"
-          )
+        () => media.classList.remove("is-fallback")
       );
-
 
       media.appendChild(video);
     }
@@ -231,9 +210,7 @@ data.publications.forEach(pub => {
     const topline = document.createElement("div");
     topline.className = "pub-topline";
 
-
     if (pub.type) {
-
       const badge = document.createElement("span");
 
       badge.className = "badge";
@@ -242,9 +219,7 @@ data.publications.forEach(pub => {
       topline.appendChild(badge);
     }
 
-
     if (pub.award) {
-
       const award = document.createElement("span");
 
       award.className = "badge award";
@@ -268,33 +243,23 @@ data.publications.forEach(pub => {
 
     authors.className = "pub-authors";
 
-
     pub.authors.forEach((author, i) => {
-
       if (i > 0) {
         authors.appendChild(
           document.createTextNode(", ")
         );
       }
 
-
       if (author === data.name) {
-
-        const strong =
-          document.createElement("strong");
+        const strong = document.createElement("strong");
 
         strong.textContent = author;
-
         authors.appendChild(strong);
-
       } else {
-
         authors.appendChild(
           document.createTextNode(author)
         );
-
       }
-
     });
 
 
@@ -317,17 +282,12 @@ data.publications.forEach(pub => {
     /* LINKS */
 
     if (pub.links && pub.links.length) {
-
-      const links =
-        document.createElement("div");
+      const links = document.createElement("div");
 
       links.className = "pub-links";
 
-
       pub.links.forEach(item => {
-
-        const a =
-          document.createElement("a");
+        const a = document.createElement("a");
 
         a.href = item.url;
         a.target = "_blank";
@@ -336,7 +296,6 @@ data.publications.forEach(pub => {
 
         links.appendChild(a);
       });
-
 
       info.appendChild(links);
     }

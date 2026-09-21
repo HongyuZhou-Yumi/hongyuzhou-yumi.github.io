@@ -1,7 +1,8 @@
 window.SITE_DATA = {
   "name": "Hongyu Zhou",
-  "initials": "Hongyu Zhou",
+  "initials": "HZ",
   "role": "Postdoctoral Researcher",
+  "location": "United Kingdom",
 "emails": [
   "h.zhou@imperial.ac.uk",
   "hz548@cam.ac.uk"
@@ -49,8 +50,8 @@ window.SITE_DATA = {
           "url": "https://doi.org/10.1145/3706598.3713647"
         },
         {
-          "label": "Project",
-          "url": "https://make.kaist.ac.kr/project/2025-juggling"
+          "label": "CHI 2025 Program",
+          "url": "https://programs.sigchi.org/CHI/2025"
         }
       ]
     },
@@ -78,6 +79,10 @@ window.SITE_DATA = {
         {
           "label": "arXiv",
           "url": "https://arxiv.org/abs/2602.00494"
+        },
+        {
+          "label": "CHI 2026 Program",
+          "url": "https://programs.sigchi.org/chi/2026/"
         }
       ]
     },
@@ -107,6 +112,10 @@ window.SITE_DATA = {
         {
           "label": "arXiv",
           "url": "https://arxiv.org/abs/2602.00493"
+        },
+        {
+          "label": "CHI 2026 Program",
+          "url": "https://programs.sigchi.org/chi/2026/"
         }
       ]
     },
@@ -128,6 +137,10 @@ window.SITE_DATA = {
         {
           "label": "PDF",
           "url": "https://doi.org/10.1145/3678508"
+        },
+        {
+          "label": "UbiComp 2024 Program",
+          "url": "https://ubicomp.hosting.acm.org/ubicompiswc2024_wp/conference-program/"
         }
       ]
     },
@@ -150,6 +163,10 @@ window.SITE_DATA = {
         {
           "label": "PDF",
           "url": "https://doi.org/10.1145/3652920.3653057"
+        },
+        {
+          "label": "AHs 2024 Program",
+          "url": "https://2024.augmented-humans.org/program/"
         }
       ]
     },
@@ -207,8 +224,8 @@ window.SITE_DATA = {
       "poster": "assets/posters/armonii.svg",
       "links": [
         {
-          "label": "Project",
-          "url": "https://github.com/inamilab/Armonii"
+          "label": "UIST 2026 Program",
+          "url": "https://uist.acm.org/2026/schedule/"
         }
       ]
     },
@@ -233,6 +250,10 @@ window.SITE_DATA = {
         {
           "label": "PDF",
           "url": "https://doi.org/10.1145/3772363.3778688"
+        },
+        {
+          "label": "CHI 2026 Program",
+          "url": "https://programs.sigchi.org/chi/2026/"
         }
       ]
     },
@@ -282,6 +303,10 @@ window.SITE_DATA = {
         {
           "label": "arXiv",
           "url": "https://arxiv.org/abs/2105.09163"
+        },
+        {
+          "label": "DAC 2021 Program",
+          "url": "https://confcats-siteplex.s3.amazonaws.com/dac/images/58th-dac_onsite_guide_v3.pdf"
         }
       ]
     },

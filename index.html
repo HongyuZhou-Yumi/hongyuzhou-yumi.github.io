@@ -1,9 +1,7 @@
 <!doctype html>
-
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
 
   <meta
@@ -18,27 +16,41 @@
 
   <title>Hongyu Zhou</title>
 
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-<!-- Font Awesome: LinkedIn -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
->
-
+  <!-- Academicons: Google Scholar, ORCID, ResearchGate -->
   <link
     rel="stylesheet"
-    href="styles.css"
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
   >
+
+  <!-- Font Awesome: email, location, LinkedIn -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NWJ0LWQ63V"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-NWJ0LWQ63V');
+  </script>
 
 </head>
 
 
 <body>
-
 
   <!-- =========================
        TOP BAR
@@ -85,7 +97,6 @@
   >
 
 
-
     <!-- =======================
          ABOUT
          ======================= -->
@@ -94,7 +105,6 @@
       class="hero"
       id="about"
     >
-
 
 
       <!-- =====================
@@ -130,14 +140,14 @@
             id="profile-photo"
             class="profile-photo"
             src="assets/profile.jpg"
-            alt="Profile photo"
+            alt="Hongyu Zhou"
           >
 
         </div>
 
 
 
-        <!-- NAME / ROLE / AFFILIATION / EMAIL -->
+        <!-- NAME / ROLE / CONTACT -->
 
         <div class="author-content">
 
@@ -150,10 +160,7 @@
           ></h1>
 
 
-
-          <!-- ROLE
-               原来的内容保留
-          -->
+          <!-- ROLE -->
 
           <p
             class="author-role"
@@ -161,79 +168,103 @@
           ></p>
 
 
+          <!-- EMAIL + LOCATION -->
 
-          <!-- AFFILIATIONS -->
-
-          <div
-            class="affiliations"
-            id="affiliations"
-          ></div>
+          <div class="sidebar-meta">
 
 
+            <div class="meta-row">
 
-          <!-- EMAIL -->
+              <i
+                class="fa-regular fa-envelope meta-icon"
+                aria-hidden="true"
+              ></i>
 
-          <div class="contact">
+              <span class="meta-label">
+                Email:
+              </span>
 
-            <span class="contact-label">
-            </span>
+              <span
+                class="email-links"
+                id="email"
+              ></span>
 
-            <span
-              class="email-links"
-              id="email"
-            ></span>
+            </div>
+
+
+            <div class="meta-row">
+
+              <i
+                class="fa-solid fa-location-dot meta-icon"
+                aria-hidden="true"
+              ></i>
+
+              <span class="meta-label">
+                Location:
+              </span>
+
+              <span
+                class="meta-value"
+                id="location"
+              ></span>
+
+            </div>
 
           </div>
-<div class="academic-links">
-
-  <!-- Google Scholar -->
-  <a
-    href="https://scholar.google.com/citations?user=cqWkrzYAAAAJ&hl=en"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Google Scholar"
-    title="Google Scholar"
-  >
-    <i class="ai ai-google-scholar"></i>
-  </a>
 
 
-  <!-- ORCID -->
-  <a
-    href="https://orcid.org/0009-0007-3278-2122"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="ORCID"
-    title="ORCID"
-  >
-    <i class="ai ai-orcid"></i>
-  </a>
+          <!-- ACADEMIC / SOCIAL LINKS -->
+
+          <div class="academic-links">
+
+            <!-- Google Scholar -->
+            <a
+              href="https://scholar.google.com/citations?user=cqWkrzYAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Scholar"
+              title="Google Scholar"
+            >
+              <i class="ai ai-google-scholar"></i>
+            </a>
 
 
-  <!-- LinkedIn -->
-  <a
-    href="https://www.linkedin.com/in/hongyu-zhou-874385358/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-    title="LinkedIn"
-  >
-    <i class="fa-brands fa-linkedin"></i>
-  </a>
+            <!-- ORCID -->
+            <a
+              href="https://orcid.org/0009-0007-3278-2122"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ORCID"
+              title="ORCID"
+            >
+              <i class="ai ai-orcid"></i>
+            </a>
 
 
-  <!-- ResearchGate -->
-  <a
-    href="https://www.researchgate.net/profile/Hongyu-Zhou-20"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="ResearchGate"
-    title="ResearchGate"
-  >
-    <i class="ai ai-researchgate"></i>
-  </a>
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/hongyu-zhou-874385358/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
 
-</div>
+
+            <!-- ResearchGate -->
+            <a
+              href="https://www.researchgate.net/profile/Hongyu-Zhou-20"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ResearchGate"
+              title="ResearchGate"
+            >
+              <i class="ai ai-researchgate"></i>
+            </a>
+
+          </div>
 
         </div>
 
@@ -255,8 +286,7 @@
         </h2>
 
 
-
-        <!-- 原来的 BIO 内容 -->
+        <!-- BIO -->
 
         <div
           class="bio"
@@ -264,17 +294,24 @@
         ></div>
 
 
-
-        <!-- 原来的 RESEARCH 内容 -->
+        <!-- RESEARCH -->
 
         <div class="research-detail">
-  <p id="research-intro" class="research-intro"></p>
-  <ul id="research-list" class="research-list"></ul>
-</div>
+
+          <p
+            id="research-intro"
+            class="research-intro"
+          ></p>
+
+          <ul
+            id="research-list"
+            class="research-list"
+          ></ul>
+
+        </div>
 
 
       </div>
-
 
     </section>
 
@@ -282,14 +319,12 @@
 
     <!-- =======================
          PUBLICATIONS
-         原内容完全保留
          ======================= -->
 
     <section
       class="publications-section"
       id="publications"
     >
-
 
       <div class="section-heading">
 
@@ -306,7 +341,6 @@
 
       <div id="publication-list"></div>
 
-
     </section>
 
 
@@ -321,13 +355,9 @@
   <footer>
 
     <p>
-
       ©
-
       <span id="year"></span>
-
       <span id="footer-name"></span>
-
     </p>
 
   </footer>
@@ -339,9 +369,7 @@
        ========================= -->
 
   <script src="site-data.js"></script>
-
   <script src="app.js"></script>
-
 
 </body>
 
